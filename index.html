@@ -11,16 +11,26 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
       <nav>
         <h3 class="navTitle"><a href="#">TASTYPLUS</a></h3>
-        <div class="navigations">
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Price</a></li>
+        <div class="navigations" onclick="toggleMenu">
+          <i class="fas fa-bars"></i>
+          <!-- <i class="fa fa-times"></i> -->
+          <ul class="navig active">
+            <li><a href="#">Home</a></li>
+            <li><a href="#aboutus">About us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#Price">Price</a></li>
           </ul>
         </div>
       </nav>
@@ -108,6 +118,7 @@
         </div>
       </div>
       <!-- ----------------------Price List---------------------------- -->
+      <div id="Price" width="50px"></div>
       <div class="section priceDetails">
         <div class="sectionHeader">
           <div class="hrLine left"></div>
@@ -145,7 +156,7 @@
         </div>
       </div>
       <!-- ----------------------AboutUs----------------- -->
-      <div class="aboutus">
+      <div class="aboutus" id="aboutus">
         <div class="sectionHeader">
           <div class="hrLine left"></div>
           <h3>About Us</h3>
@@ -165,26 +176,64 @@
           <img src="./asert/img/Screenshot 2023-07-01 151547.png" />
         </div>
       </div>
-      <div class="contact">
+      <div class="contact" id="contact">
         <div class="sectionHeader">
           <div class="hrLine left"></div>
-          <h3>About Us</h3>
+          <h3>Contact</h3>
           <div class="hrLine right"></div>
         </div>
-        <div class="abtContent">
-          <p>
-            “At TastyPlus, we specialize in creating custom-made cupcakes that
-            are tailor-made to satisfy your sweet tooth. Our passionate baker
-            pours love and creativity into each delectable treat, ensuring that
-            every bite is a delightful experience. From classic flavors to
-            unique combinations, we offer a wide range of options to suit any
-            occasion or craving. Indulge in the magic of TastyPlus cupcakes and
-            let us elevate your taste buds to new heights of blissful
-            enjoyment.”
-          </p>
-          <img src="./asert/img/Screenshot 2023-07-01 151547.png" />
+        <div class="ctContent">
+          <div class="contactD">
+            <h3>OUR LOCATION</h3>
+            <h6>48/14, Viduruwana Mawatha , Nugegoda</h6>
+          </div>
+          <div class="contactD">
+            <h3>Phone Reservation</h3>
+            <h6>0112334567 / 0778899093</h6>
+          </div>
+          <div class="contactD">
+            <h3>Email Reservation</h3>
+            <h6>reservations@tastyplus.lk</h6>
+          </div>
         </div>
       </div>
     </main>
+    <footer>
+      <span class="sub-footer">
+        <h4>TASTYPLUS</h4>
+        <h5>Social Media</h5>
+        <div class="footer">
+          <i class="fa-brands fa-facebook"></i>
+
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-tiktok"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </span>
+      <span class="smallFont">&copy 2023/07/30 tastyPlus</span>
+      <span class="sub-footer">
+        <!-- <h4>TASTYPLUS</h4> -->
+        <h5>Developer</h5>
+        <div class="developer">
+          <h4>Rumesh Siriwardhana</h4>
+          <h5>637,Kudagammana,Giriulla</h5>
+          <h5>0779011093 / 0703961965</h5>
+          <h5>siriwardhanarumesh@gmail.com</h5>
+        </div>
+      </span>
+    </footer>
+    <script>
+      // Get the necessary elements
+      const navigations = document.querySelector(".navigations");
+      const navig = document.querySelector(".navig");
+
+      // Function to toggle the "active" class
+      function toggleMenu() {
+        navig.classList.toggle("active");
+      }
+
+      // Add a click event listener to the navigations element
+      navigations.addEventListener("click", toggleMenu);
+    </script>
   </body>
 </html>
